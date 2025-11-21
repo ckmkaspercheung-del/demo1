@@ -1,5 +1,7 @@
 import time
 import streamlit as st
+import pandas as pd
+from numpy.random import default_rng as rng
 
 # Title
 st.title("Business Dashboard with Streamlit Layouts")
@@ -63,3 +65,17 @@ for i in range(10):
 
 # Once loading is complete, display the final message
 placeholder.write("Data loading complete. Displaying business insights.")
+
+
+df = pd.Dataframe(rng(0).standard_normal((20,3)), columns=["a","b","c"])
+
+st.area_chart(df)
+
+option = st.selectbox(
+         "How would you like to be contacted?"
+         ["Email",
+          "Home Phone"
+          "Mobile Phone"]
+)
+
+st.write("You selected:", option)
