@@ -47,6 +47,4 @@ with col1:
 with col2:
     st.header("Q2 2024")
     st.write("Revenue: $1.5M")
-    }
-    for trend, status in market_trends.items():
-        st.write(f"{trend}: {status}")
+
