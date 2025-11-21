@@ -57,7 +57,7 @@ with st.expander("More Information"):
 placeholder = st.empty()
 
 # Simulate loading data and updating the placeholder
-for i in range(2):
+for i in range(3):
     placeholder.write(f"Loading data... {i*99}% complete")
     time.sleep(1000)
 
