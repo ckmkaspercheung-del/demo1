@@ -10,6 +10,6 @@ st.write(msg)
 
 col1, col2 = st.columns(2)
 with col1:
-    st.header("Q1 2024")
+    st.header("Col1")
 with col2:
-    st.header("Q2 2024")
+    st.header("Col2")
