@@ -36,7 +36,7 @@ with tab2:
     ]
 
     for indx, feedback in enumerate(customer_feedback):
-        st.write(f"- {idx+1}.{feedback}")
+        st.write(f"- {indx+1}.{feedback}")
          
 with tab3:
     st.write("Content for Market Trends")
