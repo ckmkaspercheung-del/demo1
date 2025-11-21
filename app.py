@@ -1,12 +1,9 @@
 
 import streamlit as st
 
-st.title("Retail business Dashboard")
+# Title
+st.title("Business Dashboard with Streamlit Layouts")
 
-st.header("header")
-st.write("message")
-
-age=st.number_input("Enter monthly Sales Target(in USD):",
-                   min_value=0,
-				   max_value=100000,
-				   value=50000)
+# Objective
+msg = "## Objective: To demonstrate the usage of columns, tabs, and dynamic containers in a business dashboard."
+st.write(msg)
