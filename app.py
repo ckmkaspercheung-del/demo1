@@ -39,12 +39,14 @@ with tab2:
         st.write(f"- {indx+1}.{feedback}")
          
 with tab3:
-    st.write("Content for Sales Data")
-    sales_data = {
-        "Q1 2024": "$1.2M",
-        "Q2 2024": "$1.5M",
-        "Q3 2024": "$1.3M",
-        "Q4 2024": "$1.6M"
+    
+col1, col2 = st.columns(2)
+with col1:
+    st.header("Q1 2024")
+    st.write("Revenue: $1.2M")
+with col2:
+    st.header("Q2 2024")
+    st.write("Revenue: $1.5M")
     }
     for trend, status in market_trends.items():
         st.write(f"{trend}: {status}")
