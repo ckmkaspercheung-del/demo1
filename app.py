@@ -29,13 +29,15 @@ with tab1:
         st.write(f"{quarter}: {revenue}")
 with tab2:
     st.write("Content for Customer Insights")
-    customer_feedback = 123
+    customer_feedback = [
         "Great service!",
         "Very satisfied with the product quality.",
         "Quick delivery and excellent support."
-    123
+    ]
+    idx=1
     for feedback in customer_feedback:
-        st.write(f"- {feedback}")
+        st.write(f"- {idx}.{feedback}")
+        idx +=1   
 with tab3:
     st.write("Content for Market Trends")
     market_trends = {
