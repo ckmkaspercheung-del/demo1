@@ -29,11 +29,11 @@ with tab1:
         st.write(f"{quarter}: {revenue}")
 with tab2:
     st.write("Content for Customer Insights")
-    customer_feedback = [
+    customer_feedback = 123
         "Great service!",
         "Very satisfied with the product quality.",
         "Quick delivery and excellent support."
-    ]
+    123
     for feedback in customer_feedback:
         st.write(f"- {feedback}")
 with tab3:
