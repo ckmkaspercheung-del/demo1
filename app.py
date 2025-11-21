@@ -17,7 +17,6 @@ with col2:
     st.write("Revenue: $1.5M")
 
 tab1, tab2, tab3 = st.tabs(["Sales Data", "Customer Insights", "Market Trends"])
-tab1, tab2, tab3 = st.tabs(["Sales Data", "Customer Insights", "Market Trends"])
 with tab1:
     st.write("Content for Sales Data")
     sales_data = {
