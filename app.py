@@ -59,7 +59,7 @@ placeholder = st.empty()
 # Simulate loading data and updating the placeholder
 for i in range(2):
     placeholder.write(f"Loading data... {i*99}% complete")
-    time.sleep(1)
+    time.sleep(1000)
 
 # Once loading is complete, display the final message
 placeholder.write("Data loading complete. Displaying business insights.")
