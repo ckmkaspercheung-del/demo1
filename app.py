@@ -1,81 +1,25 @@
-import time
 import streamlit as st
-import pandas as pd
-from numpy.random import default_rng as rng
+from streamlit_option_menu import option_menu
 
-# Title
-st.title("Business Dashboard with Streamlit Layouts")
+st.title('Hello, Students!')
+st.write('This is your Python Programming course.')
 
-# Objective
-msg = "## Objective: To demonstrate the usage of columns, tabs, and dynamic containers in a business dashboard."
-st.write(msg)
+with st.sidebar:
+    selected=option_menu(
+        menu_title = "Menu",
+        options = ["Home", "About", "Contact"],
+        icons = ["1-circle-fill",
+                 "2-circle-fill",
+                 "3-circle-fill"],
+        menu_icon= "emoji-smile-fill",
+        default_index=0,
+    )
 
-col1, col2 = st.columns(2)
-with col1:
-    st.header("Q1 2024")
-    st.write("Revenue: $1.2M")
-with col2:
-    st.header("Q2 2024")
-    st.write("Revenue: $1.5M")
+if selected == "Home":
+    st.title(f"Welcome to the {selected} page.")
 
-tab1, tab2, tab3 = st.tabs(["Sales Data", "Customer Insights", "Market Trends"])
-with tab1:
-    st.write("Content for Sales Data")
-    sales_data = {
-        "Q1 2024": "$1.2M",
-        "Q2 2024": "$1.5M",
-        "Q3 2024": "$1.3M",
-        "Q4 2024": "$1.6M"
-    }
-    for quarter, revenue in sales_data.items():
-        st.write(f"{quarter}: {revenue}")
-with tab2:
-    st.write("Content for Customer Insights")
-    customer_feedback = [
-        "Great service!",
-        "Very satisfied with the product quality.",
-        "Quick delivery and excellent support."
-    ]
+if selected == "About":
+    st.title(f"Welcome to the {selected} page.")
 
-    for indx, feedback in enumerate(customer_feedback):
-        st.write(f"- {indx+1}.{feedback}")
-         
-with tab3:
-    
-    col1, col2 = st.columns(2)
-    with col1:
-        st.header("Q1 2024")
-        st.write("Revenue: $1.2M")
-    with col2:
-        st.header("Q2 2024")
-        st.write("Revenue: $1.5M")
-
-with st.expander("More Information"):
-    st.write("Additional details on data collection methods.")
-    st.write("# Data was collected through surveys and sales reports.")
-    st.write("- Additional details on data collection methods.")
-    st.write("## Data was collected through surveys and sales reports.")
-
-placeholder = st.empty()
-
-# Simulate loading data and updating the placeholder
-for i in range(10):
-    placeholder.write(f"Loading data... {i*99}% complete")
-    time.sleep(1)
-
-# Once loading is complete, display the final message
-placeholder.write("Data loading complete. Displaying business insights.")
-
-
-df = pd.Dataframe(rng(0).standard_normal((20,3)), columns=["a","b","c"])
-
-st.area_chart(df)
-
-option = st.selectbox(
-         "How would you like to be contacted?"
-         ["Email",
-          "Home Phone"
-          "Mobile Phone"]
-)
-
-st.write("You selected:", option)
+if selected == "Contact":
+    st.title(f"Welcome to the {selected} page.")
