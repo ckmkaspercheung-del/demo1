@@ -8,14 +8,12 @@ with st.sidebar:
     selected=option_menu(
         menu_title = "Menu",
         options = ["ISOM3400", "About", "Contact"],
-        icons = ["1-circle-fill",
-                 "2-circle-fill",
-                 "3-circle-fill"],
+        icons = ["house","cloud-upload","list-task"],
         menu_icon= "emoji-smile-fill",
         default_index=0,
     )
 
-if selected == "Home":
+if selected == "ISOM3400":
     st.title(f"Welcome to the {selected} page.")
 
 if selected == "About":
