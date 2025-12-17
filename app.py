@@ -10,14 +10,14 @@ data = {
 df = pd.DataFrame(data)
 
 # Display Sample Data
-st.write("Sales Data")
+st.header("### Sales Data")
 st.write(df)
 
 # Slider for Sales Range
 sales_range = st.slider("Select Sales Range", min_value=0, max_value=1500, value=(500, 1000))
 
 # Filter Data Based on Sales Range
-filtered_df = df[(df['Sales'] >= sales_range[0]) & (df['Sales'] <= sales_range[2])]
+filtered_df = df[(df['Sales'] >= sales_range[0]) & (df['Sales'] <= sales_range[1])]
 st.write("### Filtered Data")
 st.write(filtered_df)
 
