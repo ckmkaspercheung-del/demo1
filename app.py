@@ -17,7 +17,7 @@ st.write(df)
 sales_range = st.slider("Select Sales Range", min_value=0, max_value=1500, value=(500, 1000))
 
 # Filter Data Based on Sales Range
-filtered_df = df[(df['Sales'] >= sales_range[0]) & (df['Sales'] <= sales_range[1])]
+filtered_df = df[(df['Sales'] >= sales_range[0]) & (df['Sales'] <= sales_range[2])]
 st.write("### Filtered Data")
 st.write(filtered_df)
 
