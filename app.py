@@ -10,7 +10,7 @@ data = {
 df = pd.DataFrame(data)
 
 # Display Sample Data
-st.title("### Sales Data")
+st.write("### Sales Data")
 st.write(df)
 
 # Slider for Sales Range
